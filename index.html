@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
+    <!-- Meta Tags Essentiels -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Njankouo Ndam Dairou | Ingénieur des SI Full-Stack</title>
+    <meta name="description" content="Njankouo Ndam Dairou - Ingénieur des Systèmes d'Information Full-Stack spécialisé en développement web et architecture logicielle. Portfolio professionnel présentant mes compétences et projets.">
+    <meta name="keywords" content="Ingénieur SI, Développeur Full-Stack, Portfolio, Njankouo Ndam Dairou, Architecture logicielle, React, Node.js, MongoDB">
+    <meta name="author" content="Njankouo Ndam Dairou">
+    <meta name="robots" content="index, follow">
+
+    <!-- Balises Open Graph pour le partage social -->
+    <meta property="og:title" content="Njankouo Ndam Dairou | Ingénieur des SI Full-Stack">
+    <meta property="og:description" content="Portfolio professionnel d'un Ingénieur des Systèmes d'Information spécialisé en développement Full-Stack">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-njankouo.vercel.app/">
+    <meta property="og:image" content="https://www.votreportfolio.com/images/preview.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Njankouo Ndam Dairou | Ingénieur des SI Full-Stack">
+    <meta name="twitter:description" content="Portfolio professionnel d'un Ingénieur des Systèmes d'Information spécialisé en développement Full-Stack">
+    <meta name="twitter:image" content="https://www.votreportfolio.com/images/preview.jpg">
+
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.votreportfolio.com">
+
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Njankouo Ndam Dairou | Ingénieur des Systèmes d'Information Full-Stack</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Configuration Tailwind avec Schema.org -->
     <script>
         tailwind.config = {
             theme: {
@@ -22,148 +57,424 @@
             }
         }
     </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Njankouo Ndam Dairou",
+        "jobTitle": "Ingénieur des Systèmes d'Information Full-Stack",
+        "url": "https://portfolio-njankouo.vercel.app/",
+        "sameAs": [
+            "https://www.linkedin.com/in/votreprofil",
+            "https://github.com/votreprofil"
+        ],
+        "description": "Ingénieur des SI spécialisé en développement Full-Stack et architecture logicielle",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "France"
+        }
+    }
+    </script>
+
     <style type="text/css">
         .gradient-bg {
             background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+            background-attachment: fixed;
         }
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        /* Amélioration de la lisibilité pour le SEO */
+        h1, h2, h3 {
+            position: relative;
+            width: fit-content;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #3B82F6;
+        }
+        /* Optimisation du contraste */
+        body {
+            color: #1F2937;
+            line-height: 1.6;
+        }
+        .dark-text {
+            color: #1F2937 !important;
         }
     </style>
 </head>
 <body class="font-sans bg-light text-dark">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-bold text-primary">NND</span>
+  <!-- Tech Navigation Bar -->
+<nav class="bg-gray-900/80 backdrop-blur-md border-b border-gray-700/50 sticky top-0 z-50 transition-all duration-300 hover:bg-gray-900/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <!-- Logo with Tech Effect -->
+            <div class="flex items-center group">
+                <div class="relative">
+                    <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 group-hover:from-blue-300 group-hover:to-purple-400 transition-all duration-300">
+                        NND
+                    </span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-primary transition down">À Propos</a>
-                    <a href="#skills" class="text-gray-600 hover:text-primary transition cp">Compétences</a>
-                    <a href="#projects" class="text-gray-600 hover:text-primary transition project">Projets</a>
-                    <a href="#contact" class="text-gray-600 hover:text-primary transition contact">Contact</a>
-                </div>
+                <span class="ml-2 text-xs text-gray-400 font-mono hidden sm:inline-block">v2.4.1</span>
             </div>
-        </div>
-    </nav>
 
-   <!-- Hero Section with Tech Background -->
-<header class="relative overflow-hidden text-white py-20">
-    <!-- Tech Background (Animated Gradient + Tech Elements) -->
-    <div class="absolute inset-0 z-0">
-        <!-- Animated Gradient Background -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 opacity-90 animate-gradient"></div>
-        
-        <!-- Floating Tech Elements (SVG Icons) -->
-        <div class="absolute top-0 left-0 w-full h-full opacity-20">
-            <!-- Cloud Icons -->
-            <div class="absolute top-10 left-20 animate-float1">
-                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M13 19v-2h5v-2h-5.6c-.4 1.2-1.5 2-2.9 2-1.7 0-3-1.3-3-3v-.1c-1.7-.4-3-2-3-3.9 0-2.2 1.8-4 4-4 .3 0 .7 0 1 .1C9.3 5.6 10.9 5 13 5c3.9 0 7 3.1 7 7v7h-7z"/></svg>
+            <!-- Desktop Menu with Hover Effects -->
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="#about" class="px-4 py-2 text-gray-300 hover:text-white font-medium relative group">
+                    <span class="z-10 relative">À Propos</span>
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    <span class="absolute -bottom-1 right-0 text-xs text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono">01_about.sys</span>
+                </a>
+
+                <a href="#skills" class="px-4 py-2 text-gray-300 hover:text-white font-medium relative group">
+                    <span class="z-10 relative">Compétences</span>
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    <span class="absolute -bottom-1 right-0 text-xs text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono">02_skills.exe</span>
+                </a>
+
+                <a href="#projects" class="px-4 py-2 text-gray-300 hover:text-white font-medium relative group">
+                    <span class="z-10 relative">Projets</span>
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    <span class="absolute -bottom-1 right-0 text-xs text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono">03_projects.dev</span>
+                </a>
+
+                <a href="#contact"   class="px-4 py-2 text-gray-300 hover:text-white font-medium relative group">
+                    <span class="z-10 relative">Contact</span>
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-green-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    <span class="absolute -bottom-1 right-0 text-xs text-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono">04_contact.bat</span>
+                </a>
+
+                <a href="Curriculum.pdf" target="_blank" class="ml-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-md hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        CV
+                    </span>
+                </a>
             </div>
-            <!-- AI/Neural Network -->
-            <div class="absolute top-1/4 right-1/4 animate-float2">
-                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm-1 13.5v-3l-3 1.5 3 1.5zm1-4.5V6l6 3-6 3z"/></svg>
-            </div>
-            <!-- Database -->
-            <div class="absolute bottom-20 right-20 animate-float3">
-                <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3C7.6 3 4 4.9 4 7s3.6 4 8 4 8-1.9 8-4-3.6-4-8-4zm0 6c-4.4 0-8-1.9-8-4s3.6-4 8-4 8 1.9 8 4-3.6 4-8 4zm0 3c-4.4 0-8-1.9-8-4s3.6-4 8-4 8 1.9 8 4-3.6 4-8 4zm0 3c-4.4 0-8-1.9-8-4s3.6-4 8-4 8 1.9 8 4-3.6 4-8 4z"/></svg>
-            </div>
-            <!-- Binary Code -->
-            <div class="absolute bottom-1/3 left-1/4 animate-float4">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4 9h2v6H4zm3 0h1v6H7zm2 0h2v6H9zm3 0h1v6h-1zm2 0h2v6h-2z"/></svg>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-400 hover:text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div class="flex justify-center mb-6">
-            <div class="h-32 w-32 rounded-full bg-white bg-opacity-20 flex items-center justify-center backdrop-blur-sm">
-                <span class="text-4xl font-bold">N</span>
-            </div>
-        </div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Njankouo Ndam Dairou</h1>
-        <h2 class="text-2xl md:text-3xl font-semibold mb-6">Ingénieur des Systèmes d'Information | Full-Stack</h2>
-        <p class="text-xl max-w-3xl mx-auto mb-8">Je conçois et développe des solutions logicielles performantes et évolutives pour répondre aux défis technologiques modernes.</p>
-        <div class="flex justify-center space-x-4">
-            <a href="#contact" class="bg-white text-blue-900 px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition transform hover:scale-105">Me Contacter</a>
-            <a href="#projects" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition transform hover:scale-105">Voir mes Projets</a>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-gray-800/95 backdrop-blur-lg border-t border-gray-700">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition flex items-center">
+                <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                À Propos
+                <span class="ml-auto text-xs text-blue-400 font-mono">01_about</span>
+            </a>
+            <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition flex items-center">
+                <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                Compétences
+                <span class="ml-auto text-xs text-purple-400 font-mono">02_skills</span>
+            </a>
+            <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition flex items-center">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                Projets
+                <span class="ml-auto text-xs text-cyan-400 font-mono">03_projects</span>
+            </a>
+            <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition flex items-center">
+                <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                Contact
+                <span class="ml-auto text-xs text-green-400 font-mono">04_contact</span>
+            </a>
+            <button class="w-full mt-2 px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-md hover:shadow-lg hover:shadow-blue-500/30 transition flex items-center justify-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                Télécharger CV
+            </button>
         </div>
     </div>
-</header>
+</nav>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 <style>
-    /* Animation for background elements */
-    .animate-gradient {
-        background-size: 300% 300%;
-        animation: gradient 15s ease infinite;
+    /* Animation for navbar background on scroll */
+    nav.scrolled {
+        @apply bg-gray-900 shadow-lg;
     }
-    
-    @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+
+    /* Glow effect for active nav item */
+    .nav-item-active {
+        @apply text-white;
     }
-    
-    .animate-float1 {
-        animation: float 6s ease-in-out infinite;
-    }
-    
-    .animate-float2 {
-        animation: float 8s ease-in-out infinite 2s;
-    }
-    
-    .animate-float3 {
-        animation: float 7s ease-in-out infinite 1s;
-    }
-    
-    .animate-float4 {
-        animation: float 5s ease-in-out infinite 0.5s;
-    }
-    
-    @keyframes float {
-        0% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-20px) rotate(5deg); }
-        100% { transform: translateY(0) rotate(0deg); }
+
+    .nav-item-active::after {
+        content: '';
+        @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-400;
     }
 </style>
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white up">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-dark mb-4">À Propos de Moi</h2>
-                <div class="w-20 h-1 bg-primary mx-auto"></div>
+    <!-- Hero Section with Dynamic Tech Background -->
+    <header class="relative overflow-hidden text-white py-20 md:py-28 xl:py-32">
+        <!-- Dynamic Tech Background -->
+        <div class="absolute inset-0 z-0">
+            <!-- Background Image (Modern Tech/Architecture) -->
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-purple-900/80 to-indigo-900/90"></div>
+
+            <!-- Animated Grid Pattern -->
+            <div class="absolute inset-0 opacity-30">
+                <div class="absolute inset-0 bg-[length:50px_50px] bg-[linear-gradient(to_right,rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.3)_1px,transparent_1px)] animate-grid-pan"></div>
             </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                    <div class="h-64 w-64 rounded-full bg-gray-200 overflow-hidden">
-                        <!-- Remplacez par votre photo -->
-                        <div class="h-full w-full bg-gray-300 flex items-center justify-center text-4xl font-bold">NND</div>
-                    </div>
+
+            <!-- Floating Tech Elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <!-- Moving Code Lines -->
+                <div class="absolute top-0 left-0 w-full h-full opacity-20">
+                    <div class="absolute top-10 left-10 w-64 h-0.5 bg-white animate-code-line-1"></div>
+                    <div class="absolute top-20 right-1/4 w-48 h-0.5 bg-white animate-code-line-2"></div>
+                    <div class="absolute top-1/3 left-1/4 w-56 h-0.5 bg-white animate-code-line-3"></div>
+                    <div class="absolute bottom-1/4 right-20 w-72 h-0.5 bg-white animate-code-line-4"></div>
                 </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <h3 class="text-2xl font-semibold mb-4">Ingénieur des SI passionné par l'innovation</h3>
-                    <p class="text-lg mb-4">Je m'appelle Njankouo Ndam Dairou, 27 ans, spécialisé dans le développement d'applications full-stack et l'architecture des systèmes d'information.</p>
-                    <p class="text-lg mb-6">Mon approche combine rigueur technique, créativité et orientation résultats pour livrer des solutions qui répondent parfaitement aux besoins métiers.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="bg-gray-100 px-4 py-2 rounded-full">
-                            <span class="text-sm font-medium">🎓 Diplômé en Génie Logiciel</span>
-                        </div>
-                        <div class="bg-gray-100 px-4 py-2 rounded-full">
-                            <span class="text-sm font-medium">🚀 5+ ans d'expérience</span>
-                        </div>
-                        <div class="bg-gray-100 px-4 py-2 rounded-full">
-                            <span class="text-sm font-medium">🌍 Disponible pour missions</span>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- 3D Tech Elements -->
+                <div class="absolute top-1/4 left-1/5 w-16 h-16 rounded-lg bg-blue-500/30 backdrop-blur-sm border border-blue-400/50 shadow-lg animate-3d-float-1"></div>
+                <div class="absolute bottom-1/3 right-1/4 w-20 h-20 rounded-full bg-purple-500/30 backdrop-blur-sm border border-purple-400/50 shadow-lg animate-3d-float-2"></div>
+                <div class="absolute top-1/2 right-1/3 w-12 h-12 bg-indigo-500/30 backdrop-blur-sm border border-indigo-400/50 shadow-lg animate-3d-float-3"></div>
             </div>
         </div>
-    </section>
 
+        <!-- Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="flex justify-center mb-6">
+                <div class="h-32 w-32 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md border-2 border-white/20 shadow-xl transform transition hover:scale-110 hover:bg-white/20 duration-300">
+                    <span class="text-4xl font-bold text-white">N</span>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
+                Njankouo Ndam Dairou
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-white/90">
+                Ingénieur des Systèmes d'Information | Architecte Full-Stack
+            </h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8 text-white/80 leading-relaxed">
+                Je conçois des architectures logicielles robustes et développe des solutions digitales performantes pour les entreprises modernes.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-blue-900 px-8 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/20">
+                    Me Contacter
+                </a>
+                <a href="#projects" class="bg-transparent border-2 border-white/50 text-white px-8 py-3 rounded-md font-medium hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm hover:border-white">
+                    Voir mes Projets
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        /* Animations */
+        @keyframes grid-pan {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+
+        .animate-grid-pan {
+            animation: grid-pan 10s linear infinite;
+        }
+
+        @keyframes code-line-1 {
+            0% { transform: translateX(-100%); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(100vw); opacity: 0; }
+        }
+
+        @keyframes code-line-2 {
+            0% { transform: translateX(-150%); opacity: 0; }
+            15% { opacity: 1; }
+            85% { opacity: 1; }
+            100% { transform: translateX(100vw); opacity: 0; }
+        }
+
+        @keyframes code-line-3 {
+            0% { transform: translateX(-200%); opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { transform: translateX(100vw); opacity: 0; }
+        }
+
+        @keyframes code-line-4 {
+            0% { transform: translateX(-250%); opacity: 0; }
+            25% { opacity: 1; }
+            75% { opacity: 1; }
+            100% { transform: translateX(100vw); opacity: 0; }
+        }
+
+        .animate-code-line-1 { animation: code-line-1 15s linear infinite; }
+        .animate-code-line-2 { animation: code-line-2 18s linear infinite 3s; }
+        .animate-code-line-3 { animation: code-line-3 20s linear infinite 5s; }
+        .animate-code-line-4 { animation: code-line-4 16s linear infinite 2s; }
+
+        @keyframes float-3d-1 {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            50% { transform: translateY(-40px) translateX(20px) rotate(5deg); }
+        }
+
+        @keyframes float-3d-2 {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            50% { transform: translateY(-30px) translateX(-15px) rotate(-5deg); }
+        }
+
+        @keyframes float-3d-3 {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            50% { transform: translateY(-50px) translateX(10px) rotate(3deg); }
+        }
+
+        .animate-3d-float-1 { animation: float-3d-1 8s ease-in-out infinite; }
+        .animate-3d-float-2 { animation: float-3d-2 10s ease-in-out infinite 2s; }
+        .animate-3d-float-3 { animation: float-3d-3 7s ease-in-out infinite 1s; }
+    </style>
+    <section id="about" class="relative py-20 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden">
+      <!-- Tech background elements -->
+      <div class="absolute inset-0 opacity-20">
+          <div class="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop')] bg-cover bg-center"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-purple-900/20 to-indigo-900/30"></div>
+      </div>
+
+      <!-- Binary code animation -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+          <div class="absolute top-0 left-0 h-full whitespace-nowrap text-green-400 font-mono text-xs leading-none animate-scroll-text">
+              01010100 01100101 01100011 01101000 00100000 01010000 01110010 01101111 01100110 01101001 01101100 01100101 00100000 01001110 01101110 01100100 00100000 01000100 01100001 01101001 01110010 01101111 01110101 00100000 01001001 01101110 01100111 01100101 01101110 01101001 01100101 01110101 01110010 00100000 01010011 01101001 01110011 01110100 01100101 01101101 01100101 01110011 00100000 01000100 01101001 01101110 01100110 01101111 01110010 01101101 01100001 01110100 01101001 01101111 01101110 00100000 01000110 01110101 01101100 01101100 00101101 01010011 01110100 01100001 01100011 01101011 00100000 01000100 01100101 01110110 01100101 01101100 01101111 01110000 01100101 01110010
+          </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">Profil Technologique</span>
+              </h2>
+              <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row items-center gap-12 xl:gap-20">
+              <!-- 3D Profile Card -->
+              <div class="lg:w-2/5 relative group perspective-1000">
+                  <div class="relative transform-style-preserve-3d group-hover:rotate-y-10 transition-transform duration-700">
+                      <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-1 shadow-2xl shadow-blue-900/20">
+                          <div class="h-80 w-80 mx-auto rounded-xl bg-[url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2180&auto=format&fit=crop')] bg-cover bg-center overflow-hidden">
+                              <!-- Profile image overlay -->
+                              <div class="h-full w-full bg-blue-900/30 backdrop-brightness-75 flex items-center justify-center">
+                                  <div class="text-center p-6">
+                                      <div class="h-40 w-40 mx-auto rounded-full border-4 border-white/20 mb-4 overflow-hidden bg-gray-700 flex items-center justify-center">
+                                          <!-- Your photo here -->
+                                          <span class="text-5xl font-bold text-white">NND</span>
+                                      </div>
+                                      <h3 class="text-xl font-bold text-white">Njankouo Ndam Dairou</h3>
+                                      <p class="text-blue-300 font-mono text-sm mt-1">Ingénieur Systèmes d'Information</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-blue-600/30 to-purple-600/30 blur-lg group-hover:opacity-80 opacity-60 transition-opacity duration-700"></div>
+                  </div>
+              </div>
+
+              <!-- Professional Profile -->
+              <div class="lg:w-3/5 text-gray-300">
+                  <div class="mb-8">
+                      <h3 class="text-3xl font-bold text-white mb-6">
+                          Architecte de Solutions <span class="text-blue-400">Full-Stack</span> & Expert en <span class="text-cyan-400">Systèmes d'Information</span>
+                      </h3>
+
+                      <div class="space-y-5 text-lg leading-relaxed">
+                          <p>
+                              <span class="text-blue-400 font-mono">>></span> Diplômé en <strong>Génie Logiciel</strong> avec spécialisation en <strong>Architecture des SI</strong>, je conjugue expertise technique et vision stratégique pour concevoir des écosystèmes digitaux performants.
+                          </p>
+                          <p>
+                              <span class="text-blue-400 font-mono">>></span> Fort de <strong>5+ années d'expérience</strong> en conception et développement, j'ai piloté l'implémentation de solutions critiques pour divers secteurs d'activité (education, santé, administration).
+                          </p>
+                          <p>
+                              <span class="text-blue-400 font-mono">>></span> Ma méthodologie allie <strong>rigueur d'ingénierie</strong>, <strong>innovation technologique</strong> et <strong>alignement business</strong> pour délivrer des systèmes robustes, évolutifs et centrés utilisateur.
+                          </p>
+                      </div>
+                  </div>
+
+                  <!-- Tech Badges -->
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                      <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3 flex items-center hover:bg-blue-900/30 hover:border-blue-500/50 transition-colors duration-300">
+                          <div class="bg-blue-500/20 p-2 rounded-md mr-3">
+                              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                              </svg>
+                          </div>
+                          <span class="font-medium">Expertise Full-Stack</span>
+                      </div>
+                      <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3 flex items-center hover:bg-purple-900/30 hover:border-purple-500/50 transition-colors duration-300">
+                          <div class="bg-purple-500/20 p-2 rounded-md mr-3">
+                              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                              </svg>
+                          </div>
+                          <span class="font-medium">Architecture SI</span>
+                      </div>
+                      <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3 flex items-center hover:bg-cyan-900/30 hover:border-cyan-500/50 transition-colors duration-300">
+                          <div class="bg-cyan-500/20 p-2 rounded-md mr-3">
+                              <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                              </svg>
+                          </div>
+                          <span class="font-medium">Solutions Performantes</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <style>
+      /* Binary code animation */
+      @keyframes scroll-text {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(100%); }
+      }
+
+      .animate-scroll-text {
+          animation: scroll-text 20s linear infinite;
+      }
+
+      /* 3D card effect */
+      .perspective-1000 {
+          perspective: 1000px;
+      }
+
+      .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+      }
+
+      .group-hover\:rotate-y-10:hover {
+          transform: rotateY(10deg);
+      }
+  </style>
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gray-50 alls">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +482,7 @@
                 <h2 class="text-3xl font-bold text-dark mb-4">Mes Compétences Techniques</h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
-            
+
             <div class="py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
         <!-- Frontend - Carte améliorée -->
@@ -377,14 +688,14 @@
         }
     }
 </style>
-            
+
             <!-- Badges Technologies -->
             <div class="mt-16">
     <h3 class="text-3xl font-bold text-center mb-12 relative">
         <span class="relative z-10 px-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Stack Technique</span>
         <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></span>
     </h3>
-    
+
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         <!-- Frontend -->
         <div class="tech-category">
@@ -401,7 +712,7 @@
                 <span class="tech-tag bg-purple-50 text-purple-700 border-purple-200">Tailwind CSS</span>
             </div>
         </div>
-        
+
         <!-- Backend -->
         <div class="tech-category">
             <div class="category-header">
@@ -418,7 +729,7 @@
                 <span class="tech-tag bg-purple-50 text-purple-700 border-purple-200">GraphQL</span>
             </div>
         </div>
-        
+
         <!-- Bases de données -->
         <div class="tech-category">
             <div class="category-header">
@@ -434,7 +745,7 @@
                 <span class="tech-tag bg-orange-50 text-orange-700 border-orange-200">Firebase</span>
             </div>
         </div>
-        
+
         <!-- DevOps -->
         <div class="tech-category">
             <div class="category-header">
@@ -452,7 +763,7 @@
                 <span class="tech-tag bg-purple-50 text-purple-700 border-purple-200">CI/CD</span>
             </div>
         </div>
-        
+
         <!-- Mobile -->
         <div class="tech-category">
             <div class="category-header">
@@ -466,7 +777,7 @@
                 <span class="tech-tag bg-blue-50 text-blue-700 border-blue-200">React Native</span>
             </div>
         </div>
-        
+
         <!-- Outils -->
         <div class="tech-category">
             <div class="category-header">
@@ -489,23 +800,23 @@
     .tech-category {
         @apply bg-white bg-opacity-5 backdrop-blur-sm p-5 rounded-xl border border-white border-opacity-10 hover:border-opacity-20 transition-all duration-300;
     }
-    
+
     .category-header {
         @apply flex items-center mb-4 pb-2 border-b border-white border-opacity-10;
     }
-    
+
     .category-header svg {
         @apply h-5 w-5 mr-2 text-blue-400;
     }
-    
+
     .category-header h4 {
         @apply text-lg font-semibold text-white;
     }
-    
+
     .tech-tags {
         @apply flex flex-wrap gap-2;
     }
-    
+
     .tech-tag {
         @apply px-3 py-1.5 rounded-full text-xs font-medium border border-opacity-30 hover:scale-105 transition-transform duration-200;
     }
@@ -521,24 +832,24 @@
             <div class="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
             <p class="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">Explorez une sélection de mes projets les plus innovants, alliant design élégant et performance technique.</p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <!-- Projet 1 - SaaS -->
             <div class="group relative bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
     <!-- Main link covering entire card -->
     <a href="https://operaplus.org" class="absolute inset-0 z-10" aria-label="Visit OperaPlus Platform" target="_blank"></a>
-    
+
     <!-- Image with hover effect -->
     <div class="h-60 overflow-hidden relative">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-             alt="OperaPlus Monitoring and Evaluation Dashboard" 
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+             alt="OperaPlus Monitoring and Evaluation Dashboard"
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/20 to-transparent"></div>
         <div class="absolute bottom-4 left-4 px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded">
             LIVE PRODUCTION
         </div>
     </div>
-    
+
     <!-- Card content -->
     <div class="p-6 relative z-20">
         <!-- Project status -->
@@ -546,11 +857,11 @@
             <span class="inline-block w-3 h-3 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
             <span class="text-sm font-medium text-gray-500 tracking-widest">SAAS PLATFORM</span>
         </div>
-        
+
         <!-- Title and description -->
         <h3 class="text-2xl font-bold text-gray-900 mb-3">OperaPlus</h3>
         <p class="text-gray-600 mb-4 leading-relaxed">Comprehensive monitoring and evaluation platform for organizational performance tracking</p>
-        
+
         <!-- Technology badges -->
         <div class="flex flex-wrap gap-2 mb-5">
             <span class="tech-badge bg-blue-100 text-blue-800 border-blue-200">
@@ -563,10 +874,10 @@
             <span class="tech-badge bg-amber-100 text-amber-800 border-amber-200">PostgreSQL</span>
             <span class="tech-badge bg-purple-100 text-purple-800 border-purple-200">REST API</span>
         </div>
-        
+
         <!-- Action buttons -->
         <div class="flex space-x-4 relative z-30">
-            <a href="https://github.com/your-repo" 
+            <a href="https://github.com/your-repo"
                class="action-link text-blue-600 hover:text-blue-800"
                target="_blank"
                onclick="event.stopPropagation()">
@@ -575,7 +886,7 @@
                 </svg>
                 Source Code
             </a>
-            <a href="https://operaplus.org" 
+            <a href="https://operaplus.org"
                class="action-link text-purple-600 hover:text-purple-800"
                target="_blank"
                onclick="event.stopPropagation()">
@@ -593,12 +904,12 @@
         @apply px-3 py-1.5 rounded-full text-xs font-medium border flex items-center;
         @apply transition-all duration-200 hover:scale-105 hover:shadow-sm;
     }
-    
+
     .action-link {
         @apply font-medium flex items-center transition-transform;
         @apply hover:underline hover:scale-105;
     }
-    
+
     .group:hover .tech-badge {
         @apply shadow-xs;
     }
@@ -607,15 +918,15 @@
            <div class="group relative bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
     <!-- Lien principal couvrant toute la carte -->
     <a href="https://edutrack.operaplus.org" class="absolute inset-0 z-10" aria-label="Voir Edutrack" target="_blank"></a>
-    
+
     <!-- Image avec effet de zoom et overlay -->
     <div class="h-60 overflow-hidden relative">
-        <img src="assets/img/education.jpg" 
-             alt="Plateforme Edutrack - Gestion scolaire et suivi parental" 
+        <img src="assets/img/education.jpg"
+             alt="Plateforme Edutrack - Gestion scolaire et suivi parental"
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/20 to-transparent"></div>
     </div>
-    
+
     <!-- Contenu de la carte -->
     <div class="p-6 relative z-20">
         <!-- En-tête avec catégorie -->
@@ -623,11 +934,11 @@
             <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             <span class="text-sm font-medium text-gray-500 tracking-wider">MOBILE & WEB APP</span>
         </div>
-        
+
         <!-- Titre et description -->
         <h3 class="text-2xl font-bold text-gray-900 mb-3">Edutrack</h3>
         <p class="text-gray-600 mb-4 leading-relaxed">Solution complète de gestion scolaire avec suivi parental en temps réel</p>
-        
+
         <!-- Badges technologies -->
         <div class="flex flex-wrap gap-2 mb-5">
             <span class="tech-badge bg-purple-50 text-purple-700 border-purple-200">React</span>
@@ -635,10 +946,10 @@
             <span class="tech-badge bg-red-50 text-red-700 border-red-200">Django REST</span>
             <span class="tech-badge bg-green-50 text-green-700 border-green-200">Mobile</span>
         </div>
-        
+
         <!-- Boutons d'action -->
         <div class="flex space-x-4 relative z-30">
-            <a href="https://github.com/votreprojet" 
+            <a href="https://github.com/votreprojet"
                class="action-link text-blue-600 hover:text-blue-800"
                target="_blank"
                onclick="event.stopPropagation()">
@@ -647,7 +958,7 @@
                 </svg>
                 Code
             </a>
-            <a href="https://edutrack.operaplus.org" 
+            <a href="https://edutrack.operaplus.org"
                class="action-link text-green-600 hover:text-green-800"
                target="_blank"
                onclick="event.stopPropagation()">
@@ -665,12 +976,12 @@
         @apply px-3 py-1.5 rounded-full text-xs font-medium border;
         @apply transition-all duration-200 hover:scale-105;
     }
-    
+
     .action-link {
         @apply font-medium flex items-center transition-transform;
         @apply hover:underline hover:scale-105;
     }
-    
+
     .group:hover .tech-badge {
         @apply shadow-sm;
     }
@@ -680,15 +991,15 @@
            <div class="group relative bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
     <!-- Lien principal qui couvre toute la carte -->
     <a href="https://africasurg.com" class="absolute inset-0 z-10" aria-label="Voir AfricaSurg" target="_blank"></a>
-    
+
     <!-- Image avec overlay -->
     <div class="h-60 overflow-hidden relative">
-        <img src="assets/img/doctor.png" 
-             alt="Plateforme AfricaSurg pour médecins" 
+        <img src="assets/img/doctor.png"
+             alt="Plateforme AfricaSurg pour médecins"
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent"></div>
     </div>
-    
+
     <!-- Contenu de la carte -->
     <div class="p-6 relative z-20">
         <!-- Catégorie -->
@@ -696,11 +1007,11 @@
             <span class="inline-block w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
             <span class="text-sm font-medium text-gray-500">Médical</span>
         </div>
-        
+
         <!-- Titre et description -->
         <h3 class="text-2xl font-bold text-gray-900 mb-3">AfricaSurg</h3>
         <p class="text-gray-600 mb-4">Plateforme de partage d'expérience chirurgicale entre médecins</p>
-        
+
         <!-- Technologies -->
         <div class="flex flex-wrap gap-2 mb-5">
             <span class="bg-orange-50 text-orange-700 text-xs px-3 py-1.5 rounded-full font-medium">Laravel</span>
@@ -708,10 +1019,10 @@
             <span class="bg-indigo-50 text-indigo-700 text-xs px-3 py-1.5 rounded-full font-medium">Livewire</span>
             <span class="bg-green-50 text-green-700 text-xs px-3 py-1.5 rounded-full font-medium">Infomaniak</span>
         </div>
-        
+
         <!-- Liens secondaires -->
         <div class="flex space-x-4 relative z-30">
-            <a href="https://github.com/votreprojet" 
+            <a href="https://github.com/votreprojet"
                class="text-blue-600 hover:text-blue-800 font-medium flex items-center transition"
                target="_blank"
                onclick="event.stopPropagation()">
@@ -720,7 +1031,7 @@
                 </svg>
                 Code
             </a>
-            <a href="https://africasurg.com" 
+            <a href="https://africasurg.com"
                class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center transition"
                target="_blank"
                onclick="event.stopPropagation()">
@@ -736,14 +1047,14 @@
 
             <div class="group relative bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
     <a href="https://mboamarket.com" class="absolute inset-0 z-10" aria-label="Voir MboaMarket"></a>
-    
+
     <div class="h-60 overflow-hidden relative">
-        <img src="assets/img/shopping.jpg" 
-             alt="Plateforme MboaMarket" 
+        <img src="assets/img/shopping.jpg"
+             alt="Plateforme MboaMarket"
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent"></div>
     </div>
-    
+
     <div class="p-6 relative z-20">
         <div class="flex items-center mb-3">
             <span class="inline-block w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
@@ -774,12 +1085,12 @@
     </div>
 </div>
         </div>
-        
-      
+
+
     </div>
 </section>
     <!-- Contact Section -->
-   
+
 <!-- Contact Section -->
 <section id="contact" class="py-20 gradient-bg text-white ct">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -788,7 +1099,7 @@
             <div class="w-24 h-1.5 bg-white bg-opacity-50 mx-auto rounded-full"></div>
             <p class="text-xl mt-6 max-w-2xl mx-auto opacity-90">Disponible pour des collaborations passionnantes. N'hésitez pas à me contacter !</p>
         </div>
-        
+
         <div class="max-w-4xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
                 <!-- Email -->
@@ -801,7 +1112,7 @@
                     <h3 class="text-xl font-medium mb-3">Email</h3>
                     <a href="mailto:dairounjankouo2019@gmail.com" class="opacity-80 hover:opacity-100 hover:text-blue-200 transition">dairounjankouo2019@gmail.com</a>
                 </div>
-                
+
                 <!-- Téléphone -->
                 <div class="group">
                     <div class="bg-white bg-opacity-10 p-5 rounded-full inline-block mb-5 transition-all duration-300 group-hover:bg-opacity-20 group-hover:scale-110">
@@ -815,7 +1126,7 @@
                         <p><a href="tel:+237682596126" class="hover:opacity-100 hover:text-blue-200 transition">+237 682 59 61 26</a></p>
                     </div>
                 </div>
-                
+
                 <!-- Localisation -->
                 <div class="group">
                     <div class="bg-white bg-opacity-10 p-5 rounded-full inline-block mb-5 transition-all duration-300 group-hover:bg-opacity-20 group-hover:scale-110">
